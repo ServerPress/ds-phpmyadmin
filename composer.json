@@ -1,0 +1,38 @@
+
+{
+    "name": "serverpress/ds-phpmyadmin",
+    "description": "Builds phpMyAdmin as a Design-Time plugin for DesktopServer 5.X localhost development server.",
+    "keywords": ["localhost", "mysql", "phpmyadmin", "php"],
+    "license": "GPL",
+    "authors": [
+        {
+        "name": "Stephen J. Carnam",
+        "email": "steve@serverpress.com",
+        "homepage": "http://serverpress.com",
+        "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "phpmyadmin/phpmyadmin",
+                "version": "master",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://files.phpmyadmin.net/phpMyAdmin/5.1.1/phpMyAdmin-5.1.1-all-languages.zip",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
+    "require": {
+        "phpmyadmin/phpmyadmin": "dev-master"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "cp -avR ./vendor/phpmyadmin/phpmyadmin ./app",
+            "cp -avR ./src ./app"
+        ]
+    }
+}
