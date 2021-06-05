@@ -1,4 +1,4 @@
-#ds-phpmyadmin
+# ds-phpmyadmin
 Provides phpMyAdmin as a Design-Time plugin for DesktopServer 5.X localhost development server.
 
 ***Building***
