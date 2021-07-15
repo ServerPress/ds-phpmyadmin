@@ -31,8 +31,9 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "cp -avR ./vendor/phpmyadmin/phpmyadmin ./app",
-            "cp -avR ./src ./app"
+            "rm -rf ./app",
+            "cp -avR ./vendor/phpmyadmin/phpmyadmin/ ./app/",
+            "cp -avR ./src/config.inc.php ./app/config.inc.php"
         ]
     }
 }
