@@ -1,0 +1,10 @@
+.btn-db{
+    color:#fff;
+    background-color:#fd7e14;
+    border-color:#fd7e14;
+}
+.btn-db:hover{
+    color:#fff;
+    background-color:#dd7e04;
+    border-color:#dd7e04;
+}
