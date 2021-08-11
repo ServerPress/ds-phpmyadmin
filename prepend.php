@@ -3,7 +3,7 @@
  * Create a menu item within our localhost tools pull down menu.
  */
 global $ds_runtime;
-if ( !$ds_runtime->is_localhost ) return; // Not localhost
+if ( false == $ds_runtime->is_localhost ) return; // Not localhost
 
 
 /**
