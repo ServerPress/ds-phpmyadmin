@@ -17,7 +17,7 @@ function phpmyadmin_ds_head() {
 /**
  * Add our menu to the localhost page.
  */
-$ds_runtime->add_action( 'append_tools_menu', 'phpmyadmin_tools_menu' );
+$ds_runtime->add_action( 'ds_append_tools_menu', 'phpmyadmin_tools_menu' );
 function phpmyadmin_tools_menu() {
   echo '<b-dropdown-item href="http://localhost/ds-plugins/ds-phpmyadmin/app" target="_blank">
             phpMyAdmin - MySQL Administration
@@ -27,7 +27,7 @@ function phpmyadmin_tools_menu() {
 /**
  * Add the database button to the site listing
  */
-$ds_runtime->add_action( 'domain_button_group_after', 'phpmyadmin_domain_button_group_after' );
+$ds_runtime->add_action( 'ds_domain_button_group_after', 'phpmyadmin_domain_button_group_after' );
 function phpmyadmin_domain_button_group_after($domain) {
     global $ds_runtime;
     $dbName = $ds_runtime->preferences->sites->{$domain}->dbName;
